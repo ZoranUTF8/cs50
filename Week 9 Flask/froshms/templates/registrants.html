@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+
+<!-- TITLE -->
+{% block title %}
+Registrants
+{% endblock%}
+
+<!-- MAIN CONTENT -->
+{% block content %}
+<h1>All registrants</h1>
+<ul>
+    {% for name,sport in registrants.items() %}
+
+    <li>
+        {{name}} is registered for: {{sport}}
+    </li>
+
+
+
+    {% endfor %}
+</ul>
+{% endblock %}
+<!-- END MAIN -->

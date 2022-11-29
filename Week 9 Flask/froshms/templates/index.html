@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+
+<!-- TITLE -->
+{% block title %}
+Freshim's
+{% endblock%}
+
+<!-- MAIN CONTENT -->
+{% block content %}
+
+<h1>Register for an event</h1>
+<form action="/register" method="post">
+    <input type="text" autocomplete="off" autofocus name="name" placeholder required="Name">
+    <select name="sport">
+        <option disabled selected>sport</option>
+
+        {% for sport in sports %}
+
+        <option value="{{sport}}">{{sport}}</option>
+
+        {% endfor %}
+    </select>
+    <button type="submit">Register</button>
+</form>
+{% endblock %}
+<!-- END MAIN -->
